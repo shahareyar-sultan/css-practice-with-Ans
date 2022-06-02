@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout</title>
+
+<style>
+
+body{
+    font-size: 1.3rem;
+    background-color: antiquewhite;
+    text-align: justify;
+}
+
+h1{
+    text-align: center;
+}
+
+.grid-containar{
+    margin: 0 auto;
+    background-color: darkcyan;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* grid-template-rows: 120px 100px 90px 80px;
+    grid-column-gap: 10px;
+    grid-row-gap: 8px; */
+    grid-gap: 5px 5px;
+    justify-content: center;
+    width: 90%;
+    padding: 10px;
+
+}
+
+.grid-containar > div {
+    background-color: chocolate;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.grid-containar .item1{
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-column: 1/ span 2;
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-row: 1/span 3;
+
+}
+
+.grid-containar .item2 {
+    grid-column: 3/ span 4 ;
+
+}
+
+pre{
+    color: rgb(0, 0, 0);
+}
+</style>
+    
+</head>
+<body>
+    <h1><u>Grid layout design part-1</u></h1>
+  
+
+
+<div class="grid-containar">
+
+    <div class="item1" >div1 </div>
+    <div class="item2" >div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <div>div6</div>
+    <div>div7</div>
+    <div>div8 </div>
+    <div>div9</div>
+    <div class="item10" >div10</div>
+    <div>div11</div>
+    <div>div12</div>
+    <div>div13</div>
+    <div>div14</div>
+    <div>div15</div>
+    <div>div16</div>
+
+</div>
+
+<h1><u>Some property is given below:</u></h1>
+<pre>
+    
+.grid-containar{
+    background-color: darkcyan;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* grid-template-rows: 120px 100px 90px 80px;
+    grid-column-gap: 10px;
+    grid-row-gap: 8px; */
+    grid-gap: 5px 5px;
+    justify-content: center;
+    width: 90%;
+    padding: 10px;
+
+}
+
+.grid-containar > div {
+    background-color: chocolate;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.grid-containar .item1{
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-column: 1/ span 2;
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-row: 1/span 3;
+
+}
+
+.grid-containar .item2 {
+    grid-column: 3/ span 4 ;
+
+}
+
+</pre>
+
+    
+</body>
+</html>

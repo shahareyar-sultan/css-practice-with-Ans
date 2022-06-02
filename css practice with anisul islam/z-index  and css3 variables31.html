@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index </title>
+
+    <style>
+
+        
+body{
+        background-color: rgb(211, 244, 244);
+        text-align: justify;
+        font-size: 1.3rem;
+        color: rgb(114, 40, 40);
+    }
+
+h1{
+    text-align: center;
+    color: green;
+
+}
+
+/* variable property starts here */
+
+:root{
+
+--primary-color: green;
+--secondary-color: red;
+}
+
+
+/* variable property ends here */
+
+.div1{
+    height: 250px;
+    width: 40%;
+    background-color: var(--primary-color, blue ); /*blue is fall back color it works when primary color is misspelled or another problem */
+    position: absolute;
+    z-index: 1;
+
+}
+.div2{
+    height: 250px;
+    width: 40%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    left: 100px;
+    top: 250px;
+    z-index: 2;
+}
+
+
+/* for browser compatible */
+/* .div1{
+    background-color: green;
+}
+.div2{
+    background-color: green;
+} */
+
+/* For responsive design */
+@media screen and (max-width: 600px) {
+    :root {
+        --primray-color: black;
+        --secondary-color: aqua;
+    }
+}
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+    <h1><u>Z-index and css3 variables</u></h1>
+<p>***z-index only work with position property</p>
+    <div class="div1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, atque.
+    </div>
+    <div class="div2">
+
+    fdsasasasasasasasasasasasa
+    </div>
+
+
+</body>
+</html>

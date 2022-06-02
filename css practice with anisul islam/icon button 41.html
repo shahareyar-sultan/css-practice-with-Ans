@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create linkable icon button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+
+body{
+    font-size: 1.3rem;
+    /* background-color: rgb(224, 213, 197); */
+    text-align: justify;
+}
+h1{
+    text-align: center;
+}
+
+
+
+.btn-div{
+    background-color: rgb(166, 136, 99);
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin: 0 auto;
+    /* text-align: center; */
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+    /* display: grid;
+    grid-template-areas: 
+    'b1 b2'
+    'b4 b5'
+    'b3 b6'
+    ; */
+
+}
+
+.btn{
+    margin: 3px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    background-color: white;
+ 
+}
+.btn:hover{
+    border-radius: 40%;
+    margin: 5px;
+    background-color: aqua;
+ 
+}
+
+.btn1{
+    /* grid-area: b1; */
+    background-color: ##0778E9;
+}
+.btn2{
+    /* grid-area: b2; */
+
+}
+.btn3{
+    /* grid-area: b3; */
+ 
+}
+.btn4{
+    /* grid-area: b4; */
+ 
+}
+.btn5{
+    /* grid-area: b5; */
+
+}
+.btn6{
+    /* grid-area: b6; */
+
+}
+
+</style>
+
+</head>
+<body>
+    <h1><u>How to create linkable icon button</u></h1>
+<br><br>
+    <div class="btn-div">
+        <button class="btn btn1" onclick="window.open('https://www.facebook.com/')"><i class="fa-brands fa-facebook-square" style="color: #3b5998 ;"></i></button>
+        <button class="btn btn2" onclick="window.open('https://www.youtube.com/')"><i class="fa-brands fa-youtube" style="color: rgb(221, 79, 79) ;"></i></button>
+        <button class="btn btn3" onclick="window.open('https://twitter.com/i/flow/single_sign_on')"><i class="fa-brands fa-twitter" style="color: #3e5483 ;"></i></button>
+        <button class="btn btn4" onclick="window.open('https://github.com/')"><i class="fa-brands fa-github" style="color: #1e2a44 ;"></i></button>
+        <button class="btn btn5" onclick="window.open('https://www.instagram.com/')"><i class="fa-brands fa-instagram-square" style="color: #a66072 ;"></i></button>
+        <button class="btn btn6" onclick="window.open('https://bd.linkedin.com/')"><i class="fa-brands fa-linkedin" style="color: #6384cb ;"></i></button>
+
+    </div>
+
+
+
+
+</body>
+</html>

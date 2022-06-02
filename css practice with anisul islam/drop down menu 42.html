@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drop down menu creating </title>
+
+<style>
+
+
+body{
+    font-size: 1.3rem;
+    background-color: rgb(224, 213, 197); 
+}
+h1{
+    text-align: center;
+}
+
+
+
+
+.navbar{
+    background-color: #20bf6b;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+.navbar a{
+    text-decoration: none;
+    color: rgb(141, 85, 140);
+    padding: 10px ;
+    font-size: 1.5rem;
+}
+
+.navbar-container{
+    display: inline;
+    position: relative;
+}
+
+.navbar-content{
+    display: none;
+    background-color: rgb(239, 247, 249);
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    min-width: 100px;
+    
+   
+}
+
+.navbar-content a{
+    color: rgb(8, 23, 7);
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.navbar-container:hover .navbar-content {
+    display: block;
+
+}
+.navbar-content a:hover {
+    background-color: rgb(214, 227, 228);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    border-radius: 8px;
+}
+
+</style>
+
+</head>
+<body>
+    <h1><u>How to create drop down menu</u></h1>
+
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">tutorial</a>
+            <div class="navbar-container">
+                <a href="#">contact me</a>
+                <div class="navbar-content">
+                    <a href="#">facebook</a>
+                    <a href="#">E-mail</a>
+                </div>
+            </div>
+        <a href="#">About me</a>
+    </div>
+</body>
+</html>

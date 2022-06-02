@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout part 3</title>
+
+
+<style>
+
+/* body{
+    font-size: 1.3rem;
+    background-color: antiquewhite;
+    text-align: justify;
+}
+
+h1{
+    text-align: center;
+}
+
+.containar{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); /* auto-fill/ 2fr 1fr 1fr 1fr/repeat(5, 1fr) */
+
+}
+
+.containar > div {
+    border: 1px solid black;
+    padding: 5px;
+} */
+
+/* basic layout design starts here  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    box-sizing: border-box;
+    text-align: justify;
+    display: grid;
+    grid-template-rows: min-content auto max-content;
+    grid-template-areas: 
+    'h'
+    'm'
+    'm'
+    'm'
+    'f'
+    ;
+
+}
+
+header{
+    grid-area: h;
+    width: 100%;
+    border: 1.5px solid rgb(232, 212, 212);
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: lightcoral;
+}
+main{
+    grid-area: m;
+    width: 100%;
+    height: 100%;
+    background-color: chocolate;
+    box-sizing: border-box;
+}
+article{
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+   's1 a1'
+   's2 a2'
+   's3 .'
+    ;
+}
+section{
+    border: 1.5px solid rgb(232, 212, 212);
+    box-sizing: border-box;
+    padding: 5px;
+
+}
+aside{
+    border: 1.5px solid rgb(232, 212, 212);
+    box-sizing: border-box;
+    padding: 5px;
+
+}
+footer{
+    grid-area: f;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: brown;
+    display: grid;
+    grid-template-areas: 
+    'f1 f2'
+    
+    ;
+
+}
+
+
+
+#header-nav{
+
+}
+#sec1{
+    grid-area: s1;
+}
+#sec2{
+    grid-area: s2;
+
+}
+#sec3{
+    grid-area: s3;
+
+}
+
+#aside1{
+    grid-area: a1;
+
+}
+#aside2{
+    grid-area: a2;
+
+}
+#footer-nav1{
+    grid-area: f1;
+    border: 1.5px solid rgb(232, 212, 212);
+    padding: 5px;
+
+}
+#footer-nav2{
+    grid-area: f2;
+    border: 1.5px solid rgb(232, 212, 212);
+    padding: 5px;
+
+
+}
+
+</style>
+
+
+</head>
+<body>
+
+<!--
+    <h1><u>Grid layout design part 3</u></h1>
+<p><u>*****Grid containar properties</u></p>
+<p>display: grid;</p>
+<h1><u> List 1</u></h1>
+<ol>
+    <li>grid-template-columns: auto auto / 1fr 1fr / 200px 500px / 50% 50%/ repeat(5,20%)</li>
+    <li>grid-template-columns repeat(auto- fill, minimax(200px, 1fr));</li>
+    <li>grid-template-rows: 200px 200px and so on</li>
+    <span>another way = grid-template-areas:</span>
+</ol>
+
+<h1><u>List 2</u></h1>
+
+<ol>
+    <li>grid-column-gap: 10px;</li>
+    <li>grid-row-gap: 10px;</li>
+    <span>*** grid-gap: rowgap colgap;</span>
+</ol>
+
+
+<h1><u>For responsive design</u></h1>
+<strong> grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));</strong>
+<br><br><br>
+
+
+
+<div class="containar">
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus ipsa accusamus odit itaque beatae officiis nostrum atque vitae. Officia delectus atque, nihil praesentium corrupti ea aperiam dicta in accusantium quisquam quasi repellendus quia labore. Iure molestiae eligendi voluptate necessitatibus dolorem laudantium veritatis reiciendis, harum laborum perferendis? Ut, a saepe.</div>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati iusto, alias aliquam ipsam officiis numquam consectetur vero laboriosam soluta consequuntur? Aspernatur quisquam corporis aperiam nesciunt quo officiis debitis, suscipit error tempore, quas voluptatem consequuntur. Vel, suscipit voluptatibus soluta fugiat atque dignissimos adipisci, nobis, deserunt itaque molestiae tempore libero quod! Ipsum!</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus ipsa accusamus odit itaque beatae officiis nostrum atque vitae. Officia delectus atque, nihil praesentium corrupti ea aperiam dicta in accusantium quisquam quasi repellendus quia labore. Iure molestiae eligendi voluptate necessitatibus dolorem laudantium veritatis reiciendis, harum laborum perferendis? Ut, a saepe.</div>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati iusto, alias aliquam ipsam officiis numquam consectetur vero laboriosam soluta consequuntur? Aspernatur quisquam corporis aperiam nesciunt quo officiis debitis, suscipit error tempore, quas voluptatem consequuntur. Vel, suscipit voluptatibus soluta fugiat atque dignissimos adipisci, nobis, deserunt itaque molestiae tempore libero quod! Ipsum!</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus ipsa accusamus odit itaque beatae officiis nostrum atque vitae. Officia delectus atque, nihil praesentium corrupti ea aperiam dicta in accusantium quisquam quasi repellendus quia labore. Iure molestiae eligendi voluptate necessitatibus dolorem laudantium veritatis reiciendis, harum laborum perferendis? Ut, a saepe.</div>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati iusto, alias aliquam ipsam officiis numquam consectetur vero laboriosam soluta consequuntur? Aspernatur quisquam corporis aperiam nesciunt quo officiis debitis, suscipit error tempore, quas voluptatem consequuntur. Vel, suscipit voluptatibus soluta fugiat atque dignissimos adipisci, nobis, deserunt itaque molestiae tempore libero quod! Ipsum!</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus ipsa accusamus odit itaque beatae officiis nostrum atque vitae. Officia delectus atque, nihil praesentium corrupti ea aperiam dicta in accusantium quisquam quasi repellendus quia labore. Iure molestiae eligendi voluptate necessitatibus dolorem laudantium veritatis reiciendis, harum laborum perferendis? Ut, a saepe.</div>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati iusto, alias aliquam ipsam officiis numquam consectetur vero laboriosam soluta consequuntur? Aspernatur quisquam corporis aperiam nesciunt quo officiis debitis, suscipit error tempore, quas voluptatem consequuntur. Vel, suscipit voluptatibus soluta fugiat atque dignissimos adipisci, nobis, deserunt itaque molestiae tempore libero quod! Ipsum!</div>
+
+</div>
+<br><br><br><br>
+    <h1><u>Basic design</u></h1>
+<br><br>
+
+-->
+
+
+    <header>
+        <nav id="header-nav">header Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero laborum ipsum exercitationem porro fuga ratione corporis sed blanditiis quam expedita incidunt odit vero eos, eaque qui tempore iste iure hic fugiat temporibus! Nesciunt sunt quia et nulla, voluptate atque minus enim architecto natus repudiandae optio suscipit illum molestiae fuga quasi?</nav>
+    </header>
+
+    <main>
+        <article>
+            <section id="sec1">section1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, accusantium! Soluta, incidunt? Quas odit quibusdam dicta recusandae distinctio necessitatibus corrupti obcaecati rerum velit vel perspiciatis ipsam, eius sequi, similique tenetur, quae vero reiciendis porro aut provident praesentium. Porro a cupiditate beatae laboriosam repellendus sequi inventore dolores perspiciatis fuga, quasi perferendis?</section>
+            <section id="sec2">section2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe nemo ipsam, magnam repudiandae a tempora perferendis repellat id error ipsum expedita itaque aperiam vel tenetur quisquam optio. Asperiores, aperiam suscipit.</section>
+            <section id="sec3">section3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus adipisci voluptatum perferendis blanditiis fugiat, a sint eum expedita nulla ut, cupiditate ullam molestias voluptatibus consequuntur. Officiis esse, repudiandae atque aut sint adipisci suscipit accusantium minima assumenda itaque quis, porro nesciunt iusto dolor cum architecto rem ipsa provident fugit! Cupiditate architecto accusantium, modi praesentium voluptatem omnis vel fugit quam perferendis, numquam voluptatum ipsam itaque. Numquam maxime voluptate veritatis, a doloremque ab. Inventore maxime, magnam accusantium aspernatur omnis saepe as Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, harum asperiores. Obcaecati earum nam vero quod fugiat error suscipit excepturi!</section>
+
+            <aside id="aside1">aside1 Lorem ipsum dolor, sit amet consectetur adipisicing elit.</aside>
+            <aside id="aside2">aside2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic ipsam perspiciatis cum impedit esse quis incidunt adipisci delectus rerum repudiandae ut inventore debitis a tempore neque vitae temporibus nihil, sapiente officia distinctio modi quia? Ut vitae dignissimos quam pariatur repudiandae earum asperiores doloribus cum, voluptatibus omnis qui inventore voluptas accusantium sequi nemo provident quisquam vero reprehenderit ipsam, tempora rerum dolor.</aside>
+        </article>
+    </main>
+
+    <footer>
+        <nav id="footer-nav1">navigartion1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quo doloremque non! Praesentium, nemo molestias incidunt odio magni esse laboriosam.</nav>
+        <nav id="footer-nav2">navigartion2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos ipsam reiciendis ea ipsa commodi totam repellat molestias aliquam. Porro ratione vero velit nemo? Omnis laborum atque nesciunt quis voluptatem dolores.</nav>
+
+    </footer>
+</body>
+</html>

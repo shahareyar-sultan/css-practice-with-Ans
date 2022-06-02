@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox layout design</title>
+
+    <style>
+
+body{
+        background-color: rgb(211, 244, 244);
+        text-align: justify;
+        font-size: 1.5rem;
+        color: rgb(114, 40, 40);
+    }
+
+h1{
+    text-align: center;
+    color: rgb(43, 89, 43);
+
+}
+
+.flex-container{
+    background-color: lightcoral;
+    border: 3px solid black;
+    display: flex;
+    /* flex-wrap: wrap;
+    flex-direction: row; */
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container > div {
+font-size: 35px;
+margin: 8px;
+padding: 25px;
+box-sizing: border-box;
+width:130px;
+background-color: lightgreen;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1><u>Flexbox layout design</u></h1>
+     <p>1.Flexbox = flexible box.</p>   
+    <p>2.No hassle of using float and positioning </p>
+    <p>3.One dimension either in row or colum</p>
+    <h1><u>some flexbox property</u></h1>
+    <span>flex-wrap,f;flex-direction,justify-content(center),align-items(center)</span>
+    <p>**Inline css property: order(1,2,3...;), flex-basis(100px;)</p>
+    
+    <p>Some layout designing property is given below:</p>
+    <span>float, position, display: inline/ block/ flex</span>
+
+    
+    <br><br><br>
+<div class="flex-container">
+
+    <div class="div1" style="order: 2; flex-basis: 160px;">
+
+        Div1
+    </div>
+
+    <div class="div2" style="order: 1;">
+
+        Div2
+    </div>
+
+    <div class="div3" style="order: 3;">
+
+        Div3
+    </div>
+
+    <div class="div4" style="order: 4;">
+
+        Div4
+    </div>
+
+    
+    <div class="div5" style="order: 5;">
+
+        Div5
+    </div>
+
+    <div class="div6" style="order: 6;">
+
+        Div6
+    </div>
+
+    <div class="div7" style="order: 7;">
+
+        Div7
+    </div>
+
+    <div class="div8" style="order: 8;">
+
+        Div8
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+    
+</body>
+</html>

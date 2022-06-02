@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element centering</title>
+
+
+<style>
+
+body{
+    font-size: 1.3rem;
+    background-color: rgb(224, 213, 197);
+    text-align: justify;
+}
+h1{
+    text-align: center;
+}
+
+.main1{
+    background-color: rgb(111, 91, 62);
+    width: 90%;
+    height: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.desc1{
+    background-color: aliceblue;
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+
+
+
+
+.main2{
+    background-color: rgb(111, 91, 62);
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    height: 700px;
+    display: flex;
+    justify-content: center;     /* using to bring center horizontally */
+    align-items: center;        /* using to bring center vertically */
+
+}
+
+.desc2{
+    background-color: aliceblue;
+    width: 70%;
+    height: 200px;
+}
+
+
+
+
+.main3{
+    background-color: rgb(111, 91, 62);
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    height: 700px;
+    position: relative;
+}
+
+.desc3{
+    background-color: aliceblue;
+    width: 70%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    /*To avoid default .......*/
+}
+
+
+</style>
+
+</head>
+<body>
+    <h1><u>How to center element by using css</u></h1>
+    <center>    <strong>Element may be centerec in three ways, these are given to below:</strong></center>
+
+
+
+    <br><br>
+    <h1><u>Just for horizontally center-- work 1</u></h1>
+    <div class="main1">
+       <h1>Shahareya sultan</h1>
+        <div class="desc1">        
+            <p>Student</p>
+        </div>
+    </div>
+<br> <br> <br>
+
+
+
+    <h1><u>Element centering using flex-- work 2</u></h1>
+    
+    <div class="main2">
+
+        
+        <div class="desc2">
+            <h1>Shahareya sultan</h1>
+            <p>child div</p>
+        </div>
+    </div>
+
+<br><br><br>
+
+
+
+<h1><u>Element centering using position property-- work 3</u></h1>
+<div class="main3">
+
+        
+    <div class="desc3">
+        <h1>Shahareya sultan</h1>
+        <p>child div</p>
+    </div>
+</div>
+
+</body>
+</html>
